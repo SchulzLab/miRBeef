@@ -45,24 +45,24 @@ python train_cv_dmiso.py \
 
 
 ### 📂 Outputs
-- **Checkpoints:
-saved_models/DMISO/fold-{i}/…
+- **Checkpoints**:
+`saved_models/DMISO/fold-{i}/…`
 
-- **Logs:
+- **Logs**:
 
 Comet.ml dashboard (if enabled)
 
 Local CSVs under miTar_log_DMISO/...
 
-- **Summaries:
+- **Summaries**:
 
-miTar_log_DMISO/all_folds_summary.json
+`miTar_log_DMISO/all_folds_summary.json`
 
-miTar_log_DMISO/exported_splits.json
+`miTar_log_DMISO/exported_splits.json`
 
-Per-fold JSON: miTar_log_DMISO/objective/fold{i}_results.json
+Per-fold JSON: `miTar_log_DMISO/objective/fold{i}_results.json`
 
-**See the code comments in train_cv_dmiso.py for the full list of command-line options and defaults.
+**See the code comments in train_cv_dmiso.py for the full list of command-line options and defaults.**
 
 
 
