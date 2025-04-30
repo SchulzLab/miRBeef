@@ -26,10 +26,13 @@ A PyTorch-Lightning + Optuna pipeline for nested cross-validation and hyperparam
 git clone git@github.com:SchulzLab/miRBeef.git
 cd DMISO
 pip install -r requirements.txt
+```
 
 
 ### 🚀 Usage
-```
+```bash
+#### Set the working directory
+
 export REPO_DIR=$(pwd)
 python train_cv_dmiso.py \
   --comet-logging \
@@ -38,3 +41,32 @@ python train_cv_dmiso.py \
   --input-data-path $REPO_DIR/data/mitar/allCLIP_final.txt \
   --strip-n
 ```
+
+
+
+### 📂 Outputs
+- **Checkpoints:
+saved_models/DMISO/fold-{i}/…
+
+- **Logs:
+
+Comet.ml dashboard (if enabled)
+
+Local CSVs under miTar_log_DMISO/...
+
+- **Summaries:
+
+miTar_log_DMISO/all_folds_summary.json
+
+miTar_log_DMISO/exported_splits.json
+
+Per-fold JSON: miTar_log_DMISO/objective/fold{i}_results.json
+
+**See the code comments in train_cv_dmiso.py for the full list of command-line options and defaults.
+
+
+
+
+
+
+
